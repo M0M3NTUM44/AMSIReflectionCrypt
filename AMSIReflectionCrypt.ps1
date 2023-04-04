@@ -1,4 +1,4 @@
-#Decrypt Base64 string Encrypted with AES-128 (string, key, IV)
+#Decrypt base64 string Encrypted with AES-128 (string, key, IV)
 function Decrypt-StringAES128 {
     param (
         [Parameter(Mandatory=$true)]
