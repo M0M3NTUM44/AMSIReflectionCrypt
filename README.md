@@ -10,3 +10,7 @@ in the example shown, the bypass is used to Invoke a reverse shell after AMSI is
 Replace the url where mantioned in the script to where your malicuios Powershell script is hosted.
 
 The TestScript.ps1 file simply types "amsiutils" (flagged string) to the terminal to test if AMSI detection was Bypassed.
+
+# Credits & Resources
+https://pentestlaboratories.com/2021/05/17/amsi-bypass-methods/
+https://twitter.com/mattifestation
