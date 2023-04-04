@@ -23,5 +23,5 @@ in the example shown, the bypass is used to Invoke a reverse shell after AMSI is
 The TestScript.ps1 file simply types "amsiutils" (flagged string) to the terminal to test if AMSI detection was Bypassed.
 
 # Credits & Resources
-..*1. https://pentestlaboratories.com/2021/05/17/amsi-bypass-methods/
-..*2. https://twitter.com/mattifestation
+..*https://pentestlaboratories.com/2021/05/17/amsi-bypass-methods/
+..*https://twitter.com/mattifestation
