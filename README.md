@@ -12,5 +12,5 @@ Replace the url where mantioned in the script to where your malicuios Powershell
 The TestScript.ps1 file simply types "amsiutils" (flagged string) to the terminal to test if AMSI detection was Bypassed.
 
 # Credits & Resources
-https://pentestlaboratories.com/2021/05/17/amsi-bypass-methods/
-https://twitter.com/mattifestation
+1. https://pentestlaboratories.com/2021/05/17/amsi-bypass-methods/
+2. https://twitter.com/mattifestation
