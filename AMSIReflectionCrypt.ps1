@@ -61,12 +61,12 @@ function Decrypt-StringAES128 {
 }
 
 # Change This Part to set new Key incase of detection
-$key = "1234567890123456"
-$iv = "1234567890123456"
+$key = "8877665544332211"
+$iv = "8877665544332211"
 
 # Enctypted Flagged strings (should not be change)
-$encryptedString1 = '/DIMW3ttMbTXKLQI2baI5w=='
-$encryptedString2 = '23Acj6eCPo3ShL5+m54DNQ=='
+$encryptedString1 = 'eeXBIbiNaN9nfQCwBjgoAg=='
+$encryptedString2 = 'Y8DlAQ7pm3Lx9to6/l/M+g=='
 
 # Do not change
 $repalcement1 = $null
